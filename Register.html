@@ -44,7 +44,7 @@
 <li><input type="checkbox" name="nonen" value="noen" /><span>JavaScript</span></li>
 <li><input type="checkbox" name="nonen" value="noen" /><span>Python</span></li>
 
-<li><input type="submit" class="button" value="Submit" onClick="ValidateForm(this.form)"></li>
+<li><input type="submit" class="button" value="Submit" onClick="display()"></li>
 </ul>
 <style>
     body {
@@ -270,39 +270,26 @@ if (ErrorText= "") { form.submit() }
 }
 function display()
 {
-document.getElementById("displayarea").innerHTML = document.getElementById("name").value; 
+document.getElementById("displayarea").innerHTML = document.getElementById("uername").value; 
 document.getElementById("username").value = "";
 document.getElementById("displayarea1").innerHTML = document.getElementById("email").value; 
 document.getElementById("email").value = "";
 document.getElementById("displayarea2").innerHTML = document.getElementById("gender").value; 
 document.getElementById("gender").value = "";
-document.getElementById("displayarea3").innerHTML = document.getElementById("mydate").value; 
+document.getElementById("displayarea3").innerHTML = document.getElementById("myDate").value; 
 document.getElementById("myDate").value = "";
 document.getElementById("displayarea4").innerHTML = document.getElementById("address").value; 
 document.getElementById("address").value = "";
 document.getElementById("displayarea5").innerHTML = document.getElementById("city").value; 
 document.getElementById("city").value = "";
 document.getElementById("displayarea6").innerHTML = document.getElementById("neon").value; 
-document.getElementById("noen").value = "";
+document.getElementById("nonen").value = "";
 
 }
 
 </script>
 </form>
 </tr>
-</table>
-<table width="400px" align="center" border=0> 
-
-<tr style="background-color:#8FBC8F;">
-<td align="center"><b>Fast Name</b></td>
-<td align="center"><b>Last Name</b></td>
-</tr> 
-<tr>
-<td align="center"><div id="displayarea"></div></td>
-<td align="center"><div id="displayarea1"></div></td>
-</tr>
-</tr>
-</table>
 <table width="400px" align="center" border=0> 
 
 <tr style="background-color:#8FBC8F;">
