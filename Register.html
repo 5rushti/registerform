@@ -264,8 +264,10 @@ return true;
 }
 }
 function myFunction() {
-  document.getElementById("myDate").value = "2014-02-09";
-}
+  var uemail = document.getElementById("email").value.indexOf("@");
+  var uadd = document.getElementById("add").value;
+  var uname = document.getElementById("username").value;
+  submitOK = "true";
  
 function ValidateForm(form){
 ErrorText= "";
