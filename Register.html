@@ -8,7 +8,7 @@
 <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
 </head>
 <h1>Registration Form</h1>
-<form name='registration' onSubmit="return display();">
+<form name='registration' onSubmit="getInputValue();">
 <ul>
     <li><label for="username">Name:</label></li>
     <li><input type="text" name="username" size="15"/ title="Pleasefill this out" required ></li>  
@@ -44,7 +44,7 @@
 <li><input type="checkbox" name="nonen" value="noen" /><span>JavaScript</span></li>
 <li><input type="checkbox" name="nonen" value="noen" /><span>Python</span></li>
 
-<li><input type="submit" class="button" value="Submit" onclick="display();"></li>
+<li><input type="submit" class="button" value="Submit" onclick="getInputValue();"></li>
 </ul>
 <style>
     body {
