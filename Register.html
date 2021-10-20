@@ -47,6 +47,14 @@ load="document.registration.userid.focus();">
 
 <li><input type="submit" class="button" value="Submit" onClick="ValidateForm(this.form)"></li>
 </ul>
+    <p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("email").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
 <style>
     body {
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -269,49 +277,9 @@ return false;
 }
 if (ErrorText= "") { form.submit() }
 }
-function display()
-{
-document.getElementById("displayarea").innerHTML = document.getElementById("name").value; 
-document.getElementById("username").value = "";
-document.getElementById("displayarea1").innerHTML = document.getElementById("email").value; 
-document.getElementById("email").value = "";
-document.getElementById("displayarea2").innerHTML = document.getElementById("gender").value; 
-document.getElementById("gender").value = "";
-document.getElementById("displayarea3").innerHTML = document.getElementById("gender").value; 
-document.getElementById("myDate").value = "";
-document.getElementById("displayarea4").innerHTML = document.getElementById("gender").value; 
-document.getElementById("address").value = "";
-document.getElementById("displayarea5").innerHTML = document.getElementById("gender").value; 
-document.getElementById("city").value = "";
-document.getElementById("displayarea6").innerHTML = document.getElementById("gender").value; 
-document.getElementById("noen").value = "";
 
-}
 
 </script>
 </form>
-</tr>
-</table>
-<table width="400px" align="center" border=0> 
-
-<tr style="background-color:#8FBC8F;">
-<td align="center"><b>Name</b></td>
-<td align="center"><b>Email</b></td>
-<td align="center"><b>Gender</b></td>
-<td align="center"><b>Birthdate</b></td>
-<td align="center"><b>Address</b></td>
-<td align="center"><b>City</b></td>
-<td align="center"><b>Programming language</b></td>
-</tr> 
-<tr>
-<td align="center"><div id="displayarea"></div></td>
-<td align="center"><div id="displayarea1"></div></td>
-<td align="center"><div id="displayarea2"></div></td>
-<td align="center"><div id="displayarea3"></div></td>
-<td align="center"><div id="displayarea4"></div></td>
-<td align="center"><div id="displayarea5"></div></td>
-<td align="center"><div id="displayarea6"></div></td>
-</tr>
-</table>
 </body>
 </html>
