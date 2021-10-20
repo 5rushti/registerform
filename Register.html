@@ -270,21 +270,12 @@ if (ErrorText= "") { form.submit() }
 }
 function display()
 {
-document.getElementById("displayarea").innerHTML = document.getElementById("uername").value; 
-document.getElementById("username").value = "";
-document.getElementById("displayarea1").innerHTML = document.getElementById("email").value; 
-document.getElementById("email").value = "";
-document.getElementById("displayarea2").innerHTML = document.getElementById("gender").value; 
-document.getElementById("gender").value = "";
-document.getElementById("displayarea3").innerHTML = document.getElementById("myDate").value; 
-document.getElementById("myDate").value = "";
-document.getElementById("displayarea4").innerHTML = document.getElementById("address").value; 
-document.getElementById("address").value = "";
-document.getElementById("displayarea5").innerHTML = document.getElementById("city").value; 
-document.getElementById("city").value = "";
-document.getElementById("displayarea6").innerHTML = document.getElementById("neon").value; 
-document.getElementById("nonen").value = "";
-
+var inputVal = document.getElementById("username").value;
+alert(inputVal);
+var inputVal1 = document.getElementById("email").value;
+alert(inputVal);
+var inputVal2 = document.getElementById("city").value;
+alert(inputVal);
 }
 
 </script>
