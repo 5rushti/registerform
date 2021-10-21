@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
 <html lang="en"><head>
 <meta charset="utf-8">
-<title>Register here</title>
+<title>Register here!!</title>
 <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
 <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
 </head>
+<body onload="document.registration.userid.focus();">
 <h1>Registration Form</h1>
-<form name='registration' onSubmit="getInputValue();">
+<form name='registration' onSubmit="return formValidation();">
 <ul>
     <li><label for="username">Name:</label></li>
     <li><input type="text" name="username" size="15"/ title="Pleasefill this out" required ></li>  
@@ -44,7 +43,7 @@
 <li><input type="checkbox" name="nonen" value="noen" /><span>JavaScript</span></li>
 <li><input type="checkbox" name="nonen" value="noen" /><span>Python</span></li>
 
-<li><input type="submit" class="button" value="Submit" onclick="getInputValue();"></li>
+<li><input type="submit" class="button" value="Submit" onClick="display"></li>
 </ul>
 <style>
     body {
@@ -149,13 +148,133 @@ clear: left;
 </style>
 
 <script>
-function getInputValue(){
-            // Selecting the input element and get its value 
-            var inputVal = document.getElementById("username").value;
-            
-            // Displaying the value
-            display(inputVal);
-        }
+
+    function formValidation()
+{
+    
+var uemail = document.registration.email;
+var passid = document.registration.passid;
+var uname = document.registration.username;
+var uadd = document.registration.address;
+var ucity = document.registration.country;
+var uzip = document.registration.zip;
+var umgender = document.registration.mgender;
+var ufgender = document.registration.fgender; 
+
+if(userid_validation(uid,5,12))
+{
+if(passid_validation(passid,7,12))
+{
+if(allLetter(uname))
+{
+if(alphanumeric(uadd))
+{ 
+if(countryselect(ucity))
+{
+if(allnumeric(uzip))
+{
+if(ValidateEmail(uemail))
+{
+if(validsex(umsex,ufsex))
+{
+}
+} 
+}
+} 
+}
+}
+}
+}
+return false;
+
+
+function allLetter(uname)
+{ 
+var letters = /^[A-Za-z]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+uname.focus();
+return false;
+}
+}
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+function passid_validation(passid,mx,my)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+{
+ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" ;
+passid.focus();
+return false;
+}
+return true;
+}
+
+function alphanumeric(uadd)
+{ 
+var letters = "^[0-9a-zA-Z]+$";
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+uadd.focus();
+return false;
+}
+}
+function cityselect(ucity)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your city from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+function myFunction() {
+  document.getElementById("myDate").value = "2014-02-09";
+}
+ 
+function ValidateForm(form){
+ErrorText= "";
+if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+return false;
+}
+if (ErrorText= "") { form.submit() }
+}
+
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>NAME: </b>" + document.registration.username.value;
+  message += "<li><b>ADDRESS: </b>" + document.registration.address.value;
+  message += "<li><b>PHONE: </b>" + document.registration.age.value + "</ul>";
+  DispWin.document.write(message);
+}
 
 </script>
 </form>
