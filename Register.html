@@ -10,21 +10,21 @@
 <form name='registration' onSubmit="return display();">
 <ul>
     <li><label for="username">Name:</label></li>
-    <li><input type="text" name="username" size="15"/ title="Pleasefill this out" required ></li>  
+    <li><input type="text" name="username" size="15"/ title="Pleasefill this out" required onblur="display() ></li>  
 <li><label for="email">Email:</label></li>
     <li><input type="email" name="email" size="50"/ title="Pleasefill this out" required ></li>
-<li><label for="passid">Password:</label></li>
+<li><label for="passid" onblur="display()>Password:</label></li>
 <li><input type="password" name="passid" size="8" /  title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number." required></li>
 
 <li><label id="gender">Gender:</label></li>
-<li><input type="radio" name="gender" value="Male" required="" /><span>Male</span></li>
-<li><input type="radio" name="gender" value="Female" required="" /><span>Female</span></li>
+<li><input type="radio" name="gender" value="Male" required="" onblur="display() /><span>Male</span></li>
+<li><input type="radio" name="gender" value="Female" required="" onblur="display()/><span>Female</span></li>
 
 <li><label for="Birthday">Birthday:</label> </li>
-<li><input type="date" id="myDate"/ title="Pleasefill this out" required ></li>
+<li><input type="date" onblur="display() id="myDate"/ title="Pleasefill this out" required ></li>
 
 <li><label for="address">Address:</label></li>
-<li><input type="text" name="address" size="50" title="Pleasefill this out" required="" /></li>
+<li><input type="text" name="address" size="50" title="Pleasefill this out" required="" onblur="display() /></li>
 <li><label for="city">choose a City: </label></li>
 <li><select name="city" id="city" required="">
     <option selected="city" value="Default" required="" title="Pleasefill this out" >(Please select a city)</option>
@@ -33,7 +33,7 @@
     <option value="Pune" required="">Pune</option>
     <option value="Banglore" required="">Banglore</option>
     <option value="Hyderabad" required="">Hyderabad</option>
-</select required=""></li>
+</select required="" onblur="display()></li>
 
 <li><label> Programming Languages known : </label></li>
 
