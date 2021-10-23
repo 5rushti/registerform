@@ -8,7 +8,7 @@
   Password: <input type="password" id="password" size="20" name="password" required><br><br>
   Gender: <li><input type="radio" name="gender" value="Male" required="" /><span>Male</span></li>
 <li><input type="radio" name="gender" value="Female" required="" /><span>Female</span></li>
-  Birthdate : <input type="date" id="date" name="date" required><br>
+  Birthdate : <input type="date" id="date" name="date" required><br><br>
   Address : <input type="text" id="address" size="50" name="address" required><br><br>
   City: <select name="city" id="city" required="">
 <option selected="city" value="Default" / title="Pleasefill this out">(Please select a city)</option>
@@ -145,6 +145,107 @@ if (ErrorText= "") { form.submit() }
 
 
 </script>
+  <style>
+    body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 125.5%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+  width: 88%;
+}  
+    h1 {
+margin-left: 70px;
+}
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.label-normal {
+  font-weight: normal;
+}
+
+.pattern {
+  color: Green;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.supports-color .color,
+.supports-date .date,
+.supports-time .time,
+.supports-month .mont {
+  display: none;
+}
+
+
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+form ul li label{
+float: left;
+clear: left;
+width: 100px;
+text-align: right;
+margin-right: 20px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+form ul li input, select, span {
+float: left;
+margin-bottom: 20px;
+  
+  
+}
+
+form textarea {
+float: left;
+width: 350px;
+height: 150px;
+}
+
+
+
+[type="submit"] {
+clear: left;
+}
+
+.button {
+  background-color: beige;
+  border: 1px solid #0088cc;
+  border-radius: 1px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 0.9375em;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em;
+  padding: 0.5em 0.6875em;
+  width: auto;
+  text-align: center;
+  left: 200px;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+  background-color: #005580;
+  border-color: #005580;
+  color: grey;
+  text-decoration: none;
+}
+
+.button:active {
+  box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+}
+
+
+</style>
 </form>
 </body>
 </html>
